@@ -6,8 +6,9 @@ import urllib
 import re
 import os
 
+
 def backup_database(db_file, db_backup_file):
-	copy2(db_file, db_backup_file)
+    copy2(db_file, db_backup_file)
 
 
 def create_connection(db_file):
@@ -60,8 +61,9 @@ def download_files():
     for url in re.sub(r"#(.+)", "", file('urls.txt', 'r').read()).split("\n"):
         if url is "":
             continue
+        print("Downloading:", url)
         html_values = download_file(url)
-        print("finished downloading:", url)
+        print("Finished downloading:", url)
         if html_values is not None:
             parsed_string = parse_string(html_values)
             f = open("adBlockList.txt", "a+")
@@ -110,7 +112,6 @@ def import_processed_file(conn):
 
 
 def apply_exceptions(conn):
-    print("applying exceptiosn...")
     exceptions = re.sub(r"#(.+)", "", file('exceptions.txt', 'r').read()).split("\n")
     cur = conn.cursor()
     for exception in exceptions:
