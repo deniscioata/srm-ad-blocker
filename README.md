@@ -1,6 +1,6 @@
 # Synology SRM AdBlocker
 This is a simple implementation of a Synology SRM Ad Blocker.  
-__You can use it, but it’s at your own risk.__
+__You can use it, but it’s at your own risk.__ The worst case scenario is that you will end up with an unusable Safe Search app, but this can be fixed by reinstalling it.
 
 ## Installation
 - Install `Safe Access` from `Package Center`
@@ -26,7 +26,7 @@ __You can use it, but it’s at your own risk.__
 - Activate `Web Filter`
 - Select `Custom` and then select your previously created web filter
 
-####Don't forget to disable admin account and SSH service if they were disabled (I prefer to keep them disabled for security reasons)
+#### Don't forget to disable admin account and SSH service if they were disabled (I prefer to keep them disabled for security reasons)
 
 ## How to update the ad blocking list
 - Execute `main.py` using python as `root`. 
